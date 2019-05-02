@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Shiwang's Cloud Project</title>
+        <style media="screen">
+            #custom-button{
+            padding: 10px;
+            color: white;
+            background-color: #009578;
+            border: 1px solid #000;
+            border-radius: 5px;
+            cursor: pointer;
+            }
+
+            #custom-button:hover{
+            background-color: hsl(172, 91%, 50%);
+            }
+            #custom-text {
+            margin-left: 10px;
+            font-family: sans-serif;
+            color: #aaa;
+            }
+            #sub-btn{
+                padding: 10px;
+                color: white;
+                background-color: #aaa;
+                border: 1px solid black;
+                border-radius: 5px;
+                cursor: pointer;
+
+            }
+            #sub-btn:hover{
+            background-color: darkgray;
+            }
+
+        </style>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        {% include 'includes/_navbar.html' %}
+        <div class="container">
+        <div class="jumbotron text-center">
+    <h1>Welcome! Find topic model of your article.</h1>
+    <p class="lead"> This Application is built as a cloud project on python flask framework. It uses Latent Dirichlet Analysis algorithm to analyze probable topic from the heading of any article.</p>
+</div>
+    
+        <form action="/findtopic" method="POST" >
+            <!-- <input type="file" id="file" hidden = "hidden" />
+            <button type="button" id="custom-button">Choose a file</button>
+            <span id="custom-text">no file chosen yet</span> -->
+            <label class="lead" >Enter article headline: </label>
+            <input name="text">
+            <input type="submit">
+            
+
+        </form>
+        
+        </div>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+    </body>
+</html>
+
