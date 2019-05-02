@@ -86,7 +86,7 @@ def findtopic():
                                                         dictionary[bow_doc_40[i][0]], 
                                                                 bow_doc_40[i][1]))
 
-        lda_model = gensim.models.ldamodel.LdaModel(bow_corpus, num_topics=1, id2word=dictionary)
+        lda_model = gensim.models.ldamodel.LdaModel(bow_corpus, num_topics=5, id2word=dictionary)
 
         vector = lda_model[unseen_doc]
         print("new text")
