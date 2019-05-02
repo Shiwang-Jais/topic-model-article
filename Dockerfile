@@ -15,9 +15,6 @@ COPY . /app
 
 # Install any needed packages specified in requirements.txt
 RUN pip install -r ./requirements.txt
-RUN pip install azure
-RUN pip install azure-batch          
-RUN pip install azure-mgmt-scheduler
 RUN pip install nltk
 RUN pip install numpy
 RUN pip install gensim
